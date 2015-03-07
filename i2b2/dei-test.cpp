@@ -3,20 +3,27 @@
 #include <stdlib.h>
 #include "svm.h"
 
-const int num_feature = 180;
-const int num_test = 1186;
+//const int num_feature = 180;
+//const int num_test = 1186;
 
 using namespace std;
 
 int main()
 {
+    int num_features = 64, num_samples = 0;
     double *labels = new double[num_test];
-    //svm_node **test_data = new svm_node*[num_test];
-    /*for (int i = 0; i < num_test; ++i)
-        test_data[i] = new svm_node[num_feature+1];*/
     ifstream tfile("dna.scale.t", ios::in);
     svm_model *model = svm_load_model("dei.model");
     double count = 0;
+    
+    
+    
+    
+    
+    
+    
+    
+    
     for (int i = 0; i < num_test; ++i)
     {
         string line;

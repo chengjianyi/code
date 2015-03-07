@@ -14,7 +14,7 @@ lib: svm.o
 	$(CXX) $${SHARED_LIB_FLAG} svm.o -o libsvm.so.$(SHVER)
 
 svm-predict: svm-predict.c svm.o
-	$(CXX) $(CFLAGS) svm-predict.c svm.o -o svm-predict -lm
+	$(CXX) $(CFLAGS) svm-predict.c svm.o -o svm-predict -lm -g
 svm-train: svm-train.c svm.o
 	$(CXX) $(CFLAGS) svm-train.c svm.o -o svm-train -lm
 svm-scale: svm-scale.c
