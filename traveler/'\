@@ -1,0 +1,17 @@
+#include <iostream>
+#include "tree.h"
+#include "graph.h"
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+class Traveler
+{
+private:
+    const int numNode;
+public:
+    Traveler(int num);
+    pair<int, int>& calcCost(TreeNode* n);
+    void searchPath();
+};

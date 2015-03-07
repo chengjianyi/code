@@ -1,0 +1,15 @@
+#include "lcs.h"
+
+
+string LCS::LCS_Recursion(string s1, string s2)
+{
+    cout<<s1<<" "<<s2<<endl;
+    if (s1.size() == 0 || s2.size() == 0) return ""; 
+    if (s1[s1.size() - 1] == s2[s2.size() - 1])
+        return LCS_Recursion(s1.substr(0, s1.size() - 1), s2.substr(0, s2.size() - 1)) + s1[s1.size()];
+    else
+    {
+        s1
+        return (LCS_Recursion(s1.substr(0, s1.size() - 1), s2).size()>LCS_Recursion(s1, s2.substr(0, s2.size() - 1)).size())?LCS_Recursion(s1.substr(0, s1.size() - 1), s2):LCS_Recursion(s1, s2.substr(0, s2.size() - 1));
+    }
+}
